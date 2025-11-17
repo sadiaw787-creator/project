@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certi-Pro Org Dashboard</title>
+    <link rel="stylesheet" href="org_dashboard_style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <div class="main-content">
+            
+            <header class="dashboard-header">
+                <div class="logo">
+                    <i class="fas fa-cube"></i> Certi-Pro
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="#">Manage Certificates</a>
+                    <a href="#">Manage Users</a>
+                    <a href="#">Templates</a>
+                </div>
+                <div class="user-actions">
+                    <i class="far fa-bell icon"></i>
+                    <i class="far fa-user-circle icon"></i>
+                </div>
+            </header>
+            
+            <div class="content-area">
+                
+                <section class="main-stats-section">
+                    <div class="welcome-bar">
+                        <div>
+                            <h2>Welcome Back, Admin!</h2>
+                            <p>Here's a summary of your organization's performance.</p>
+                        </div>
+                        <button class="issue-cert-btn">Issue New Certificates</button>
+                    </div>
+
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <span>Total Learners</span>
+                            <strong>2450</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span>Certificates Issued</span>
+                            <strong>2380</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span>Active Programs</span>
+                            <strong>80</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span>Success Rate</span>
+                            <strong>86%</strong>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="employee-stats-section">
+                    <div class="section-header-row">
+                        <h4>Employee Statistics</h4>
+                        <div class="member-actions">
+                            <button class="action-btn add">Add Member</button>
+                            <button class="action-btn remove">Remove Member</button>
+                        </div>
+                        <a href="#" class="view-all">View All +</a>
+                    </div>
+                    
+                    <div class="employee-stats-cards">
+                        <div class="emp-stat-card">
+                            <span>Total Employees</span>
+                            <strong>350</strong>
+                        </div>
+                        <div class="emp-stat-card">
+                            <span>Newly Joins</span>
+                            <strong>43</strong>
+                        </div>
+                        <div class="emp-stat-card">
+                            <span>Progress</span>
+                            <strong>66%</strong>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="analytics-grid">
+                    
+                    <div class="analytics-card">
+                        <h3>Organization Analytics</h3>
+                        
+                        <div class="analytics-section pass-fail">
+                            <p>Pass / Fail Distribution</p>
+                            <div class="donut-charts">
+                                <div class="chart-wrapper">
+                                    <div class="donut-placeholder pass">
+                                        <div class="chart-center">
+                                            <strong>70%</strong>
+                                            <span>Pass</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-wrapper">
+                                    <div class="donut-placeholder fail">
+                                        <div class="chart-center">
+                                            <strong>20%</strong>
+                                            <span>Fail</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-section bar-chart-section">
+                            <p>Certificates Issued</p>
+                            <div class="bar-chart">
+                                <div class="bar-set">
+                                    <span class="bar" style="height: 40%;" title="Jan"></span>
+                                    <span class="bar" style="height: 50%;" title="Feb"></span>
+                                    <span class="bar" style="height: 70%;" title="Mar"></span>
+                                    <span class="bar" style="height: 85%;" title="Apr"></span>
+                                    <span class="bar max-bar" style="height: 100%;" title="May"></span>
+                                    <span class="bar" style="height: 80%;" title="Jun"></span>
+                                    <span class="bar" style="height: 75%;" title="Jul"></span>
+                                    <span class="bar" style="height: 80%;" title="Aug"></span>
+                                </div>
+                                <div class="x-axis-labels">
+                                    <span>Jan</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Apr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                    <span>Jul</span>
+                                    <span>Aug</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="side-content-column">
+                        
+                        <div class="recent-activity-card">
+                            <div class="section-header-row">
+                                <h3>Recent Activity</h3>
+                                <a href="#" class="view-all">View All &rarr;</a>
+                            </div>
+                            <ul class="activity-list">
+                                <li class="completed">Anushka completed Python Program <span>1 hour ago</span></li>
+                                <li class="completed">Zain completed Data Science Program <span>5 days ago</span></li>
+                                <li class="updated">Assessment 'Python Basics' updated by Trainer Ahmad <span>1 week ago</span></li>
+                                <li class="approved">15 Certificates approved today <span>2 week ago</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="api-integration-card">
+                            <h3>API Integration</h3>
+                            <div class="api-detail">
+                                <p>API Key</p>
+                                <strong>vdndosubd8agh</strong>
+                            </div>
+                            <div class="api-detail">
+                                <p>Issue Ago</p>
+                                <strong>6 weeks ago</strong>
+                            </div>
+                            <div class="api-actions">
+                                <button class="api-btn issue">Issue Certificate</button>
+                                <button class="api-btn verify">Verify Certificate</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="cert-stats-section">
+                    <div class="section-header-row">
+                        <h4>Certificate Statistics</h4>
+                        <a href="#" class="view-all">View All &rarr;</a>
+                    </div>
+                    <div class="cert-stats-cards">
+                        <div class="cert-stat-card">
+                            <span>Certificates Issued</span>
+                            <strong>350</strong>
+                        </div>
+                        <div class="cert-stat-card">
+                            <span>Remaining Certificates</span>
+                            <strong>20</strong>
+                        </div>
+                        <div class="cert-stat-card">
+                            <span>Active Rate</span>
+                            <strong>60%</strong>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

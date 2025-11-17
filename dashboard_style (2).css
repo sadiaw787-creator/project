@@ -1,0 +1,457 @@
+/* Global Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Top align the dashboard */
+    min-height: 100vh;
+}
+
+/* Dashboard Container (Clean, centered layout) */
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px; /* Adjusted width for clean look */
+    min-height: 100vh;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header/Nav Bar --- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; 
+    background-color: white;
+    border-bottom: 1px solid #eee; /* Light separator */
+}
+
+.dashboard-header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.dashboard-header .logo .fas {
+    color: #4A90E2; 
+}
+
+.dashboard-header .nav-links {
+    margin-right: auto; /* Push links and actions apart */
+    margin-left: 50px;
+}
+
+.dashboard-header .nav-links a {
+    text-decoration: none;
+    color: #888;
+    margin-right: 25px;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.dashboard-header .nav-links .active {
+    color: #333;
+    font-weight: bold;
+}
+
+.dashboard-header .user-actions .icon {
+    font-size: 20px;
+    color: #666;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* --- Content Area --- */
+.content-area {
+    padding: 30px 40px;
+}
+
+/* --- Welcome and Stats Section --- */
+.stats-section {
+    margin-bottom: 30px;
+}
+
+.welcome-bar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.welcome-bar h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.welcome-bar p {
+    font-size: 14px;
+    color: #666;
+}
+
+.welcome-bar button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center; /* Button ko center align karein */
+}
+
+/* Stats Cards */
+.stats-cards {
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 20px 0;
+    /* Box shadow removed as per clean image */
+}
+
+.stat-card {
+    padding: 0 15px; 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-left: 1px solid #eee; /* Divider */
+}
+
+.stat-card:first-child {
+    border-left: none; /* First card has no left border */
+}
+
+.stat-card span {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.stat-card strong {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* --- QR Views Section --- */
+.qr-views-section {
+    margin-bottom: 30px;
+}
+
+.qr-views-section .section-header {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.qr-views-section .section-header div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.qr-views-section .section-header h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+.qr-views-section .section-header p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 0;
+    margin-right: auto;
+}
+
+.qr-views-section .section-header a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 14px;
+}
+
+.qr-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.qr-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Clean shadow */
+    border: 1px solid #eee; 
+    position: relative;
+}
+
+.qr-card h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.qr-card strong {
+    font-size: 32px;
+    color: #333;
+    display: block;
+}
+
+.qr-card span {
+    font-size: 12px;
+    color: #888;
+}
+
+/* --- Skills & Activity Grid --- */
+.skills-activity-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Skills thora bada, Activity chota */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.skills-breakdown-card, .recent-activity-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.skills-breakdown-card h3, .recent-activity-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.skills-breakdown-card p {
+    font-size: 14px;
+    color: #888;
+    float: left;
+}
+
+.skills-breakdown-card .time-filter {
+    font-size: 12px;
+    color: #007BFF;
+    float: right;
+    margin-top: -18px; /* Align with h3/p */
+}
+
+/* Chart and Legend Styling */
+.chart-area {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.chart-placeholder {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* Doughnut Chart Lookalike (Simple) */
+    background: conic-gradient(
+        #4A90E2 0% 40%, /* Frontend (Blue) */
+        #FF7875 40% 66%, /* Backend (Red/Pink) */
+        #9B59B6 66% 89%, /* Databases (Purple) */
+        #F0C419 89% 100% /* DevOps (Yellow) */
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-skills {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-skills strong {
+    font-size: 32px;
+    color: #333;
+}
+.total-skills span {
+    font-size: 12px;
+    color: #666;
+}
+
+.legend-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.legend-item {
+    font-size: 13px;
+    color: #666;
+}
+
+.legend-item:before {
+    content: '•';
+    margin-right: 3px;
+    font-size: 18px;
+}
+.legend-item.frontend:before { color: #4A90E2; }
+.legend-item.backend:before { color: #FF7875; }
+.legend-item.databases:before { color: #9B59B6; }
+.legend-item.devops:before { color: #F0C419; }
+
+/* Recent Activity Styling */
+.recent-activity-card .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.recent-activity-card .section-header a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 14px;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+    padding-left: 20px;
+}
+
+.activity-list li:last-child {
+    border-bottom: none;
+}
+
+.activity-list li span {
+    color: #888;
+    float: right;
+    font-size: 12px;
+}
+
+.activity-list li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.activity-list li.passed:before {
+    background-color: #5CB85C; /* Green */
+    border-color: #5CB85C;
+}
+
+.activity-list li.attempted:before {
+    background-color: #F0AD4E; /* Orange/Yellow */
+    border-color: #F0AD4E;
+}
+
+/* --- Trending Skills Section --- */
+.trending-skills-section {
+    margin-top: 10px;
+}
+
+.trending-skills-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skill-info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.earn-cert-btn, .explore-btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+}
+
+.earn-cert-btn {
+    background-color: white;
+    color: #007BFF;
+    border: 1px solid #007BFF;
+}
+
+.explore-btn {
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid #007BFF;
+    align-self: flex-end; /* Last button is right aligned */
+}

@@ -1,0 +1,219 @@
+/* Global Styling and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 1. Global Height Fix for Full Screen */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f0f2f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Signup Container - Full Screen Fit */
+.signup-container {
+    display: flex;
+    width: 100vw; /* Full Screen Width */
+    min-height: 100vh; /* Full Screen Height */
+    box-shadow: none; /* Shadow hataya */
+    border-radius: 0; /* Corner golai hatayi */
+    overflow: hidden; 
+}
+
+/* --- Left Section (Signup Form) --- */
+/* 3. Signup Section Centering (Purple Area) */
+.signup-section {
+    flex: 1; 
+    background-color: #f0f2f5; /* Container ka background set kiya */
+    padding: 0; /* Padding hata diya */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+    position: relative; 
+}
+
+/* 4. Centered Form Card (Inner Box) Styling */
+.signup-form-card {
+    width: 100%;
+    max-width: 450px; /* Card size */
+    background-color: white;
+    padding: 30px 50px; /* Card ke andar padding */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    
+    /* Content ko stack karne ke liye */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header aur logo ki position theek karein (ab woh card ke andar hain) */
+.signup-form-card .header {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 14px;
+    color: #888;
+}
+.signup-form-card .logo {
+    margin-top: 25px; /* Header ke baad space */
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+.signup-form-card .logo .fas {
+    color: #4A90E2; 
+}
+
+
+/* Baaki form styles */
+.signup-form-card h2 {
+    font-size: 28px; 
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center; 
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.input-group input:focus {
+    border-color: #4A90E2;
+}
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+.terms-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #4A90E2;
+}
+.terms-checkbox a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+.create-account-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.create-account-btn:hover {
+    background-color: #0056b3;
+}
+.login-link {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+.login-link a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Right Section (Hello, There! - Blue Background) --- */
+.welcome-section {
+    position: relative;
+    flex: 1; 
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    background: linear-gradient(rgba(0, 0, 0, 0.151), rgba(0, 0, 0, 0.151)), 
+                url('mon.jpg') no-repeat center center/cover; 
+}
+.welcome-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.welcome-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+.welcome-section .login-btn {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    border: none;
+    padding: 9px 40px;
+    border-radius: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 300px;
+    text-decoration: none; 
+    display: inline-block;
+}
+.welcome-section .login-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+        width: 90%;
+        max-width: 400px;
+        min-height: auto;
+    }
+    .welcome-section {
+        display: none; 
+    }
+    .signup-section {
+        padding: 0; /* Padding will be on the card */
+        background-color: #f0f2f5;
+    }
+    .signup-form-card {
+        margin: 20px auto; /* Margin for spacing on small screens */
+    }
+}

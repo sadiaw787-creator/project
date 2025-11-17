@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certi-Pro User Dashboard</title>
+    <link rel="stylesheet" href="dashboard_style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <div class="main-content">
+            
+            <header class="dashboard-header">
+                <div class="logo">
+                    <i class="fas fa-cube"></i> Certi-Pro
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="#">View Certificates</a>
+                </div>
+                <div class="user-actions">
+                    <i class="far fa-bell icon"></i>
+                    <i class="far fa-user-circle icon"></i>
+                </div>
+            </header>
+            
+            <div class="content-area">
+                
+                <section class="stats-section">
+                    <div class="welcome-bar">
+                        <div>
+                            <h2>Welcome Back, User!</h2>
+                            <p>Here's a summary of your achievements.</p>
+                        </div>
+                        <button class="view-certs-btn">View Certificates</button>
+                    </div>
+
+                    <div class="stats-cards">
+                        <div class="stat-card">
+                            <span>Cleared Tests</span>
+                            <strong>06</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span>Acquired Skills</span>
+                            <strong>09</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span>Certificates Earned</span>
+                            <strong>03</strong>
+                        </div>
+                        <div class="stat-card">
+                            <span>QR Views</span>
+                            <strong>02</strong>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="main-body-grid">
+                    
+                    <div class="qr-views-section">
+                        <div class="section-header">
+                            <div>
+                                <h3>Certificate QR Views</h3>
+                                <p>Track views on your shared certificates.</p>
+                            </div>
+                            <a href="#">View All &rarr;</a>
+                        </div>
+                        <div class="qr-cards">
+                            <div class="qr-card">
+                                <h4>Advanced JavaScript</h4>
+                                <strong>112</strong>
+                                <span>views</span>
+                            </div>
+                            <div class="qr-card">
+                                <h4>Python for Data Science</h4>
+                                <strong>88</strong>
+                                <span>views</span>
+                            </div>
+                            <div class="qr-card">
+                                <h4>SQL Basics</h4>
+                                <strong>67</strong>
+                                <span>views</span>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-activity-grid">
+                        
+                        <div class="skills-breakdown-card">
+                            <div class="card-header">
+                                <h3>Skills Breakdown</h3>
+                                <p>A visual representation of your expertise.</p>
+                                <span class="time-filter">All Time +2%</span>
+                            </div>
+
+                            <div class="chart-area">
+                                <div class="chart-placeholder">
+                                    <div class="total-skills">
+                                        <strong>8</strong>
+                                        <span>Total Skills</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="legend-area">
+                                <span class="legend-item frontend">Frontend (40%)</span>
+                                <span class="legend-item backend">Backend (26%)</span>
+                                <span class="legend-item databases">Databases (23%)</span>
+                                <span class="legend-item devops">DevOps (12%)</span>
+                            </div>
+                        </div>
+
+                        <div class="recent-activity-card">
+                            <div class="section-header">
+                                <h3>Recent Activity</h3>
+                                <a href="#">View All &rarr;</a>
+                            </div>
+                            <ul class="activity-list">
+                                <li class="passed">Passed: **Advanced JavaScript** <span>2 days ago</span></li>
+                                <li class="passed">Passed: **Python for Data Science** <span>6 days ago</span></li>
+                                <li class="attempted">Attempted: **React Fundamentals** <span>1 week ago</span></li>
+                                <li class="passed">Passed: **SQL Basics** <span>2 weeks ago</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="trending-skills-section">
+                        <h3>Trending Skills</h3>
+                        <div class="skill-info-cards">
+                            <div class="skill-card">
+                                <h4>Java Script</h4>
+                                <p>JavaScript (JS) is a high-level, interpreted (or just in time compiled) programming language that is a core technology of the World Wide Web, alongside HTML and CSS. It was created by Brendan Eich in 1995.</p>
+                                <button class="earn-cert-btn">Earn Certificate</button>
+                            </div>
+                            <div class="skill-card">
+                                <h4>Data Science</h4>
+                                <p>Data science is an interdisciplinary field that uses statistical, scientific methods, and computer science to extract knowledge and insights from data. It involves gathering, analyzing, and interpreting complex data</p>
+                                <button class="earn-cert-btn">Earn Certificate</button>
+                            </div>
+                            <div class="skill-card">
+                                <h4>Python</h4>
+                                <p>Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Python is dynamically type-checked and garbage-collected.</p>
+                                <button class="explore-btn">Explore more skills</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

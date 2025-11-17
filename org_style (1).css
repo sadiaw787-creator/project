@@ -1,0 +1,229 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+/* Global Height Fix */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f0f2f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container - Full Screen Fit */
+.signup-container {
+    display: flex;
+    width: 100vw; /* Full Screen Width */
+    min-height: 100vh; /* Full Screen Height */
+    box-shadow: none; /* Shadow hataya */
+    border-radius: 0; /* Corner golai hatayi */
+    overflow: hidden; 
+}
+
+/* --- Left Section (Signup Form) --- */
+/* Form Section Centering */
+.signup-section {
+    flex: 1; 
+    background-color: #f0f2f5; /* Background set kiya */
+    padding: 0; /* Padding hata diya */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center; /* Horizontal centering */
+    position: relative; 
+}
+
+/* Centered Form Card Styling */
+.org-signup-card {
+    width: 100%;
+    max-width: 450px; /* Card size */
+    background-color: white;
+    padding: 30px 50px; /* Card ke andar padding */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    
+    /* Content ko stack karne ke liye */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header aur logo ki position theek karein (ab woh card ke andar hain) */
+.org-signup-card .header {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 14px;
+    color: #888; 
+}
+
+.org-signup-card .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px; /* Header ke baad space */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333; 
+}
+
+.org-signup-card .logo .fas {
+    color: #4A90E2; 
+}
+
+.org-signup-card h2 {
+    font-size: 28px; 
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 15px; 
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input, .org-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Dropdown specific styling */
+.org-dropdown {
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path fill="%23333333" d="M0 0l5 6 5-6z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px;
+    padding-right: 30px; 
+}
+
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 13px; 
+}
+
+.terms-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #4A90E2;
+}
+
+.terms-checkbox a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.create-account-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Right Section (Welcome to Certi-Pro - Blue Background) --- */
+.welcome-section {
+    flex: 1; 
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    /* Background Image: Apne 'mon.jpg' file ka naam use karein */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('mon.jpg') no-repeat center center/cover; 
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 35px; 
+}
+
+.welcome-section .login-btn {
+    background-color: white;
+    color: #4A90E2;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 200px; 
+    text-decoration: none; /* A tag ke liye */
+    display: inline-block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+        width: 90%;
+        max-width: 400px;
+        min-height: auto;
+    }
+
+    .welcome-section {
+        display: none; 
+    }
+
+    .signup-section {
+        padding: 0;
+        background-color: #f0f2f5;
+    }
+    .org-signup-card {
+        margin: 20px auto; 
+    }
+}
